@@ -1,8 +1,8 @@
 {
-    "name": "harold/javierbermeo_api",
+    "name": "harold/licencias",
     "autoload": {
         "psr-4": {
-            "Harold\\javierbermeo_api\\": "src/"
+            "Harold\\licencias\\": "src/"
         }
     },
     "authors": [

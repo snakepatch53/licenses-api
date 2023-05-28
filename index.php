@@ -14,24 +14,15 @@ require_once __DIR__ . '/vendor/autoload.php';
 require_once(__DIR__ . '/src/functions/RouterAdapter.php');
 require_once(__DIR__ . '/src/functions/utils.php');
 require_once(__DIR__ . '/src/dao/MysqlAdapter.php');
-require_once(__DIR__ . '/src/api/ApiAdapter.php');
 require_once(__DIR__ . '/src/functions/middlewares.php');
 
-
 // cargamos los objetos de acceso a datos
-require_once('./src/dao/InfoDao.php');
 require_once('./src/dao/UserDao.php');
-require_once('./src/dao/ClientDao.php');
-require_once('./src/dao/ClientFileDao.php');
+require_once('./src/dao/SurveyDao.php');
 
-// cargamos los objetos de acceso a API
-require_once('./src/api/ClientApi.php');
-
-// cargamos los servicios para el web service (WEB SERVICE)
-require_once('./src/services/info.service.php');
+// cargamos los servicios para la API
 require_once('./src/services/user.service.php');
-require_once('./src/services/client.service.php');
-require_once('./src/services/client_file.service.php');
+require_once('./src/services/survey.service.php');
 
 // cargamos las variables de entorno
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
@@ -42,8 +33,6 @@ $router = new \Bramus\Router\Router();
 
 // declaramos las rutas
 require __DIR__ . '/src/routes/services.php';
-require __DIR__ . '/src/routes/public.php';
-require __DIR__ . '/src/routes/panel.php';
 
 // iniciamos el router xd
 $router->run();
