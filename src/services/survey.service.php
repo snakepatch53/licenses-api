@@ -59,8 +59,8 @@ class SurveyService
 
     public static function update($DATA)
     {
-        // header('Content-Type: application/json');
-        // header('Access-Control-Allow-Origin: *');
+        header('Content-Type: application/json');
+        header('Access-Control-Allow-Origin: *');
         $adapter = $DATA['mysqlAdapter'];
         $result = [
             'status' => 'error',
