@@ -103,7 +103,7 @@ class SurveyService
                 'status' => 'success',
                 'message' => 'Pregunta actualizada correctamente',
                 'response' => true,
-                'data' => $survey
+                'data' => $survey_id
             ];
         }
         echo json_encode($result);
